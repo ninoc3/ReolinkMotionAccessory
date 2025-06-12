@@ -1,11 +1,6 @@
-import type { API } from 'homebridge';
+import { API } from 'homebridge';
+import { ReolinkMotionAccessory } from './src/accessory';
 
-import { ExampleHomebridgePlatform } from './platform.js';
-import { PLATFORM_NAME } from './settings.js';
-
-/**
- * This method registers the platform with Homebridge
- */
-export default (api: API) => {
-  api.registerPlatform(PLATFORM_NAME, ExampleHomebridgePlatform);
+export = (api: API) => {
+  api.registerAccessory('HomebridgeReolinkMotion', ReolinkMotionAccessory);
 };
